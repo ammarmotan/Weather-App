@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body{
+            background-image: url(weather.jpg);
+            background-repeat: no-repeat;
+            /* background-size: cover; */
+            background-position: center;
+            /* height: 100%; */
+            color: #fff;
+        }
+        .card{
+            margin: auto;
+            margin-top: 10%;
+            max-width: 340px;
+            height: 415px;
+            border: 1px solid rgb(139, 139, 139);
+            box-shadow: 10px 10px 20px rgb(30, 30, 30 , 0.7);
+            border-radius: 10px;
+            backdrop-filter: blur(15px);
+        }
+        .card input{
+            font-size: 17px;
+            margin-top: 1%;
+            height: 25px;
+            border-radius: 20px;
+            padding-left: 10px;
+            border: 1px solid lightgray;
+            outline: lightgray;
+        }
+        .card button{
+            margin-left: 5px;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+        }
+        .card button:hover{
+            cursor: pointer;
+        }
+        .card button i{
+            font-size: 18px;
+        }
+        .card h2{
+            padding-left: 12px;
+            padding-bottom: 5px;
+        }
+        .card h2 span{
+            padding-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <center>
+            <h1 style=" font-size: 35px; letter-spacing: 1px; ">World Weather</h2>
+        </center>
+        <center>
+            <input type="text" id="text" placeholder="Search City" autocomplete="on">
+            <button type="submit" onclick="getapi()" id="button"><i class="fa-solid fa-magnifying-glass"></i></button><br><br>
+        </center>
+        <h2 class="title">Name: <span id="name"></span></h2>
+        <h2 class="title">Temperature: <span id="temp"></span></h2>
+        <h2 class="title">Feels_Like: <span id="feel"></span></h2>
+        <h2 class="title">Humidity: <span id="humidity"></span></h2>
+        <h2 class="title">Pressure: <span id="pressure"></span></h2>
+        <!-- <p><img src="" alt="" id="Poster"></p> -->
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
